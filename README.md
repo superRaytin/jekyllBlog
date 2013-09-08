@@ -1,4 +1,1 @@
-jekyllBlog
-==========
-
-jekyll blog source
+This is homepage of superRaytin.github.com master
