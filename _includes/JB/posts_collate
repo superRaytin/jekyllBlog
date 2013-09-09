@@ -35,10 +35,12 @@ Usage:
         <div class="meta">
             <span class="date">{{ post.date | date: "%B %e, %Y" }}</span>
             <br>
+            {% unless post.tags == empty %}
             <span class="tags">
                 {% assign tags_list = post.tags %}
                 {% include JB/tags_list %}
             </span>
+            {% endunless %}
 
             <span class="comments">
                 <a href="{{ BASE_PATH }}{{ post.url }}#disqus_thread">Comments</a>
