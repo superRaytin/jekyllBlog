@@ -11,7 +11,7 @@ tags : [jekyll]
 的方法，暂且放下网上教程们中要求的ruby，devkit版本，今天发现直接全部用最新的版本，也是可以的。
 
 ### 安装Ruby环境和DevKit
-直接到rubyInstaller官网下载，目前最新的版本分别是 `Ruby 2.0.0-p247 (x64)` 和 `DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe` ，我的系统是64位，32位的话选择对应版本，
+直接到 [rubyInstaller](http://rubyinstaller.org/downloads/) 官网下载，目前最新的版本分别是 `Ruby 2.0.0-p247 (x64)` 和 `DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe` ，我的系统是64位，32位的话选择对应版本，
 先安装Ruby环境，注意，必须先安装Ruby环境，为免混乱，可以解压至 `C:\Ruby` ,ruby安装成功之后安装DevKit，同样解压至 `C:\DevKit` 。
 
 ### 配置
@@ -64,7 +64,7 @@ cd 到工程目录，目前网上大部分教程说的启动服务命令 `jekyll
     error: invalid byte sequence in GBK. Use --trace to view backtrace
 
 ### 目前网上流传的一些解决办法
-1.`http://yanping.me/cn/blog/2012/10/09/chinese-charset-problems-with-jekyll/` 这篇文章给出的解决办法：
+1.[http://yanping.me/cn/blog/2012/10/09/chinese-charset-problems-with-jekyll/](http://yanping.me/cn/blog/2012/10/09/chinese-charset-problems-with-jekyll/) 这篇文章给出的解决办法：
 修改bash的字符集：在C:\Documents and Settings\用户名下，找到文件.bash_profile，后面加两行:
 
 > set LC_ALL=en_US.UTF-8
@@ -73,7 +73,7 @@ cd 到工程目录，目前网上大部分教程说的启动服务命令 `jekyll
 
 这种方法经过测试并不能解决问题。
 
-2.`http://www.dewen.org/q/5893` 给出的解决办法：
+2.[http://www.dewen.org/q/5893](http://www.dewen.org/q/5893) 给出的解决办法：
 
 a: 在文件头加上
 
@@ -113,7 +113,25 @@ b: 运行
 重启jekyll服务，编译成功。
 
 ### 参考资料
-http://log.medcl.net/item/2012/04/jekyll-encounter-encoding-problems/
+[http://log.medcl.net/item/2012/04/jekyll-encounter-encoding-problems/](http://log.medcl.net/item/2012/04/jekyll-encounter-encoding-problems/)
 
-http://www.cnblogs.com/purediy/archive/2013/03/07/2948892.html
+[http://www.cnblogs.com/purediy/archive/2013/03/07/2948892.html](http://www.cnblogs.com/purediy/archive/2013/03/07/2948892.html)
 
+### 其他
+jekyll环境搭好之后，每次启动服务都需要cd到工程目录，然后运行命令 `jekyll serve`。
+
+是不是觉得有点繁琐呢？
+
+反正我是觉得很烦，这里写了个短小的批处理文件，可以当作是一键启动服务的开关，打开记事本，将下面的命令行拖到里面保存为 `.bat` 文件，放到桌面上，以后双击即可启动服务。
+
+    @echo
+    cd D:\WebstormProjects\jekyllBlog
+    D:
+    jekyll serve
+    pause
+
+第二行填写工程目录，第三行对应第二行的盘符——为什么这么做呢，因为直接 cd路径之后，必须要再运行相应的盘符才能到达工程目录，不信你可以试试。
+
+批处理文件执行效果：
+
+![jekyll-local](/assets/posts/images/jekyll-local-1.png)
