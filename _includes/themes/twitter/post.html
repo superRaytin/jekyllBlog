@@ -1,6 +1,17 @@
-<article class="post markdown-body">
-    <h1 class="title1">{{ page.title }}</h1>
-    <div class="entry">
+<article class="post">
+    <div class="meta">
+        <div class="date">
+            <time datetime='{{ post.date | date_to_utc | date: "%Y-%m-%d" }}' data-updated="true" itemprop="datePublished">{{ page.date | date_to_utc | date: "%Y-%m-%d" }}</time>
+        </div>
+        {% unless page.tags == empty %}
+        <div class="tags">
+            {% assign tags_list = page.tags %}
+            {% include JB/tags_list %}
+        </div>
+        {% endunless %}
+    </div>
+    <h1 class="title">{{ page.title }}</h1>
+    <div class="entry markdown-body">
         {{ content }}
     </div>
 </article>

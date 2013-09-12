@@ -15,7 +15,7 @@ tags : [jekyll]
 先安装Ruby环境，注意，必须先安装Ruby环境，为免混乱，可以解压至 `C:\Ruby` ,ruby安装成功之后安装DevKit，同样解压至 `C:\DevKit` 。
 
 ### 配置
-a. 打开CMD，运行以下命令：
+a.打开CMD，运行以下命令：
 
     cd C:\DevKit
 
@@ -23,13 +23,13 @@ a. 打开CMD，运行以下命令：
 
     ruby dk.rb install
 
-b. 完成之后安装jekyll：
+b.完成之后安装jekyll：
 
     gem install jekyll
 
 可以用 `jekyll --version` 来检查是否安装成功
 
-c. 安装rdiscount，这个是用来解析Markdown标记的解析包。
+c.安装rdiscount，这个是用来解析Markdown标记的解析包。
 
     gem install rdiscount
 
@@ -112,10 +112,18 @@ b: 运行
 
 重启jekyll服务，编译成功。
 
+### markdown解释中文列表的问题
+jekyll默认的markdown解释引擎是maruku，在解释列表的时候，列表中有英文字符正常，否则会不正常，这种情况需要把解释引擎切换为rdiscount，
+具体方法是打开 `_config_yml` 文件，在 `pygments:true` 下面添加一行
+
+    markdown: rdiscount
+
 ### 参考资料
 [http://log.medcl.net/item/2012/04/jekyll-encounter-encoding-problems/](http://log.medcl.net/item/2012/04/jekyll-encounter-encoding-problems/)
 
 [http://www.cnblogs.com/purediy/archive/2013/03/07/2948892.html](http://www.cnblogs.com/purediy/archive/2013/03/07/2948892.html)
+
+[http://cloudaice.com/markdown-list-chinese-problem/](http://cloudaice.com/markdown-list-chinese-problem/)
 
 ### 其他
 jekyll环境搭好之后，每次启动服务都需要cd到工程目录，然后运行命令 `jekyll serve`。
