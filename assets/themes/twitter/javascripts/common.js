@@ -5,6 +5,13 @@
  */
 $(function(){
     var boss = {
+        masonry: function(){
+            $('#msn-container').masonry({
+                columnWidth: 280,
+                itemSelector: '.msn-item',
+                gutter: 20
+            });
+        },
         observer: function(){
             var disqus = $('#disqus_thread'),
                 btn_showcom = $('#J-showComment');
@@ -14,7 +21,9 @@ $(function(){
                 disqus.removeClass('height0').addClass('mt20');
             });
 
-            $('.fancybox').fancybox();
+            //window.onload = function(){
+                boss.masonry();
+            //}
         },
         init: function(){
             boss.observer();
