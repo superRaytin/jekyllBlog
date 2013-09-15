@@ -21,9 +21,9 @@ $(function(){
                 disqus.removeClass('height0').addClass('mt20');
             });
 
-            //window.onload = function(){
+            window.onload = function(){
                 boss.masonry();
-            //}
+            }
         },
         init: function(){
             boss.observer();
