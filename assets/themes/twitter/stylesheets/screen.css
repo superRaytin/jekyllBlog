@@ -1825,12 +1825,8 @@ article .entry-content .caption::before {
 .msn-item-inner{
     padding-top: 10px;
 }
-.msn-item-inner a{
-    display: block;
-    color: #333;
-}
 .msn-item-inner a:hover{
-    text-decoration: none;
+    text-decoration: underline;
 }
 .msn-item-inner img{
     max-width: 100%;
