@@ -16,13 +16,13 @@ b·  在github上新建一个仓库
 
 c·  然后，在本地新建一个文件夹，右键 git init here，完成初始化，这时右键菜单的tortoiseGit里会出现 设置 等信息，点击设置
 
-![pic](/assets/posts/images/git-webstorm-1.gif)
+<img class="lazy" src="/assets/posts/images/grey.gif" data-original="/assets/posts/images/git-webstorm-1.gif">
 
 将建好的仓库地址进行配置
 
 d·  右键 git同步
 
-![pic](/assets/posts/images/git-webstorm-2.gif)
+<img class="lazy" src="/assets/posts/images/grey.gif" data-original="/assets/posts/images/git-webstorm-2.gif">
 
 点击拉取
 
@@ -35,10 +35,10 @@ a· 在github.com上创建一个新仓库，按照提示新建README.md，.gitig
 
 b· 打开webstorm，VCS – checkout from version control – git – 输入仓库地址，之后本地将会生成一个与仓库同名文件夹
 
-![pic](/assets/posts/images/git-webstorm-3.gif)
+<img class="lazy" src="/assets/posts/images/grey.gif" data-original="/assets/posts/images/git-webstorm-3.gif">
 
-![pic](/assets/posts/images/git-webstorm-3.jpg)
+<img class="lazy" src="/assets/posts/images/grey.gif" data-original="/assets/posts/images/git-webstorm-3.jpg">
 
 c· 此时可以测试git的提交与更新，随意更新一个文件，点击工具栏上的commit changes，提交更新，成功
 
-![pic](/assets/posts/images/git-webstorm-4.gif)
+<img class="lazy" src="/assets/posts/images/grey.gif" data-original="/assets/posts/images/git-webstorm-4.gif">

@@ -14,7 +14,7 @@ tags : [node-webkit]
 如果你不了解Node-webkit是什么，可以在网上搜一下资料，也可看看 [以web的方式写桌面程序——Node-Webkit](/skill/2013/07/15/node-webkit-desktop-app-develop/)
 
 ## 最终的界面
-![Rock MarkDown Editor](/assets/posts/images/rock-markdown-1.png)
+<img class="lazy" src="/assets/posts/images/grey.gif" data-original="/assets/posts/images/rock-markdown-1.png">
 
 ## 功能分布
 编辑器的布局从上到下：

@@ -176,7 +176,7 @@ define是一个全局方法，挂在window下。它最多接受两个参数，�
 
 依赖树如下：
 
-![pic](/assets/posts/images/duckJS-example-01.jpg)
+<img class="lazy" src="/assets/posts/images/grey.gif" data-original="/assets/posts/images/duckJS-example-01.jpg">
 
 图1
 
@@ -188,7 +188,7 @@ define是一个全局方法，挂在window下。它最多接受两个参数，�
 
 模块factory触发过程如下：
 
-![pic](/assets/posts/images/duckJS-example-02.jpg)
+<img class="lazy" src="/assets/posts/images/grey.gif" data-original="/assets/posts/images/duckJS-example-02.jpg">
 
 图2
 
@@ -252,7 +252,7 @@ lastDepMod指向最后一个模块，isLast用于特殊回溯的情况，下面�
 
 为什么要先查找当前模块的依赖列表呢。
 
-![pic](/assets/posts/images/duckJS-example-03.jpg)
+<img class="lazy" src="/assets/posts/images/grey.gif" data-original="/assets/posts/images/duckJS-example-03.jpg">
 
 图3
 
@@ -262,19 +262,19 @@ toDepList存的是回溯信息，factory指向当前模块。此时模块状态�
 
 下面讲讲几种特殊回溯。
 
-![pic](/assets/posts/images/duckJS-example-04.jpg)
+<img class="lazy" src="/assets/posts/images/grey.gif" data-original="/assets/posts/images/duckJS-example-04.jpg">
 
 图4
 
 此时，lastDepMod指向A1，而非A2，`如果最后一个依赖模块已加载，则依次往前推`，A2已加载过。 第一层依赖模块回溯点从A2往前移至A1，即A1的factory触发完可以安全地去找它的上级A了。
 
-![pic](/assets/posts/images/duckJS-example-05.jpg)
+<img class="lazy" src="/assets/posts/images/grey.gif" data-original="/assets/posts/images/duckJS-example-05.jpg">
 
 图5
 
 我们看到，A2这时候既是A的依赖模块，同时也是A3的，这时候就要控制使得A2回溯点往上是回到A3而不是A（主持人：iaLast可以上场卖萌了）， 当初设计到这里的时候，迷惑了很久该如何处理这种情况，脑细胞死伤无数啊 (╯_╰) isLast是一个数组，在解析模块依赖时标示该依赖是否是最后一个，是则表示当前为回溯点。妙啊！当时一想出来这方法，乐得洒家直拍大腿<(￣︶￣)>
 
-![pic](/assets/posts/images/duckJS-example-06.jpg)
+<img class="lazy" src="/assets/posts/images/grey.gif" data-original="/assets/posts/images/duckJS-example-06.jpg">
 
 图6
 
@@ -319,7 +319,7 @@ toDepList存的是回溯信息，factory指向当前模块。此时模块状态�
 
 duckJS加载流程图：
 
-![pic](/assets/posts/images/duckJS-process2.jpg)
+<img class="lazy" src="/assets/posts/images/grey.gif" data-original="/assets/posts/images/duckJS-process2.jpg">
 
 限于个人知识与经验，其中代码难免有算法及效率上的不足，如果你有更好的实现思路，欢迎留言拍砖，节操奉上。
 

@@ -142,4 +142,4 @@ jekyll环境搭好之后，每次启动服务都需要cd到工程目录，然后
 
 批处理文件执行效果：
 
-![jekyll-local](/assets/posts/images/jekyll-local-1.png)
+<img class="lazy" src="/assets/posts/images/grey.gif" data-original="/assets/posts/images/jekyll-local-1.png">
