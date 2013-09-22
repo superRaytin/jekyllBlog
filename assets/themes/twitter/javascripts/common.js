@@ -6,7 +6,12 @@
 $(function(){
     var boss = {
         masonry: function(){
-            $('#msn-container').masonry({
+            /*$('#msn-container').masonry({
+                columnWidth: 280,
+                itemSelector: '.msn-item',
+                gutter: 20
+            });*/
+            var masonry = new Masonry(document.getElementById('msn-container'), {
                 columnWidth: 280,
                 itemSelector: '.msn-item',
                 gutter: 20
