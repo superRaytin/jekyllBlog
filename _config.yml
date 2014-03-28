@@ -1,7 +1,7 @@
 # This is the default format. 
 # For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink: /:categories/:year/:month/:day/:title
-destination: D:\WebstormProjects\superraytin.github.com
+destination: D:\workspace\site\superraytin.github.com
 
 exclude: [".rvmrc", ".rbenv-version", "Rakefile", "changelog.md"]
 auto: true
