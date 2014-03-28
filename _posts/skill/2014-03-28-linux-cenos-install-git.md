@@ -6,10 +6,9 @@ tags : [linux]
 ---
 {% include JB/setup %}
 
-### 前言
-上个月把VPS迁到budgetVM，终于不用再受digitalOcean的气了，入手很方便，重点是支持支付宝付款——paypal的界面真是不习惯，开通速度挺快的，1G的内存够我折腾一段时间了~，额外送了俩IP，过段时间再研究下把我那几个二级域名也绑定过来，一直在win7下开发，对linux还不是很熟悉，要学习的东西还挺多的
+上个月把VPS迁到budgetVM，终于不用再受digitalOcean的气了，入手很方便，重点是支持支付宝付款——paypal的界面真是不习惯，开通速度挺快的，1G的内存够我折腾一段时间了~，额外送了俩IP，过段时间再研究下把我那几个二级域名也绑定过来
 
-今天刚把主站部好，发现CentOS默认没有git工具，[Git官网](http://git-scm.com/download/linux) 提示可以通过yum安装
+今天刚把主站部署好，发现CentOS默认没有git工具，[Git官网](http://git-scm.com/download/linux) 提示可以通过yum安装
 
     yum install git
 
@@ -40,3 +39,7 @@ CentOS 6.x32-bit (x86/i386):
 CentOS 6.x 64-bit(x64):
 
     rpm -Uvh http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-5.noarch.rpm
+
+另外，发现`screen`命令的方式比`nohup`好很多啊，nohup想要关掉，必须先找到进程ID，再kill，而screen切换，退出都比较方便
+
+一直在win7下开发，都快out了，对linux还不是很熟悉，要学习的东西还挺多的
